@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+    <meta property="og:title" content="Canvas com js" />
+    <meta property="og:url" content="https://github.com/felipeozias/tag_canvas" />
+
+</head>
+
+<body>
+    <p>Imagem svg:</p>
+    <img id="imagem" width="600" src="brasil.svg" alt="Bandeira do brasil">
+    <br>
+
+    <p>Imagem svg no canvas:</p>
+    <canvas id="canvas" width="700" height="600" style="border:1px solid #d3d3d3;">
+        O navegador não suporta o elemento canvas.
+    </canvas>
+
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var img = document.getElementById("imagem");
+            ctx.drawImage(img, 10, 10);
+        };
+    </script>
+</body>
+
+</html>
